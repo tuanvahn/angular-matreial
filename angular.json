@@ -22,7 +22,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/chart.js/dist/Chart.min.css"
+              "node_modules/chart.js/dist/Chart.min.css",
+              "node_modules/@nebular/theme/styles/prebuilt/default.css"
             ],
             "scripts": [
               "node_modules/chart.js/dist/Chart.js"

@@ -1,5 +1,5 @@
 import 'hammerjs';
-import { NgModule  } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComponentInputComponent } from './component-input/component-input.component';
 
@@ -29,15 +29,25 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ComponentchartComponent } from './componentchart/componentchart.component';
 import { ComponentButtonsIndicatorsComponent } from './component-buttons-indicators/component-buttons-indicators.component'
+import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
+import { MatDatepickerModule,
+  MatNativeDateModule,
+  MatFormFieldModule } from '@angular/material';
+import { DrapMaterialComponent } from './drap-material/drap-material.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
-  declarations: [ComponentInputComponent, ComponentchartComponent, ComponentButtonsIndicatorsComponent],
+  declarations: [ComponentInputComponent, ComponentchartComponent, ComponentButtonsIndicatorsComponent, DrapMaterialComponent],
   imports: [
+    CalendarModule,
+    MatDatepickerModule,
+    DragDropModule,
     CommonModule,
+    MatNativeDateModule,
     MatButtonModule, 
     MatCheckboxModule, 
     MatToolbarModule, 
-    MatChipsModule, 
+    MatChipsModule,
     MatOptionModule, 
     MatGridListModule, 
     MatProgressBarModule, 
@@ -51,15 +61,28 @@ import { ComponentButtonsIndicatorsComponent } from './component-buttons-indicat
      BrowserModule,
      FormsModule,
      BrowserAnimationsModule,
+     MatDatepickerModule,
+        MatNativeDateModule,
+        MatFormFieldModule,
+        MatInputModule
   ],
   exports: [
-    MatButtonModule, MatCheckboxModule, MatToolbarModule, 
-    MatChipsModule, MatOptionModule, MatGridListModule, 
+    MatButtonModule, MatCheckboxModule, MatToolbarModule,
+    MatChipsModule, MatOptionModule, MatGridListModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    DragDropModule,
+    MatInputModule,
+    MatDatepickerModule,MatNativeDateModule,
     MatProgressBarModule, MatSliderModule, MatSlideToggleModule, 
     MatMenuModule, MatDialogModule, MatSnackBarModule, MatSelectModule, 
     MatInputModule, MatSidenavModule, MatCardModule, MatIconModule, 
     MatRadioModule, MatProgressSpinnerModule, MatTabsModule, MatListModule,
-    ComponentInputComponent,ComponentchartComponent,ComponentButtonsIndicatorsComponent
+    ComponentInputComponent,ComponentchartComponent,ComponentButtonsIndicatorsComponent,DrapMaterialComponent
   ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
+  ]
 })
 export class ComponentMaterialModule { }

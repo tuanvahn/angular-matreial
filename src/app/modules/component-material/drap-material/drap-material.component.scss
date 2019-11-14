@@ -1,0 +1,16 @@
+.drap-list{
+    width: 500px;
+    margin: 20px 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    .drap-box{
+        width: 90%;
+        padding: 10px 15px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        cursor: pointer;
+        &:hover{
+            background-color: aliceblue;
+        }
+    }
+}

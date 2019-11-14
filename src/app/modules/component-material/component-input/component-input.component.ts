@@ -48,6 +48,22 @@ export class ComponentInputComponent implements OnInit  {
     { text: 'Four', cols: 2, rows: 1, color: '#DDBDF1' },
   ];
 
+  opened() {
+    var btn = document.createElement("button");
+    btn.onclick = function () {
+      alert("blabla");
+    };
+    var t = document.createTextNode("Click Me");
+    btn.appendChild(t);
+    var div = document.createElement("div");
+    div.appendChild(btn);
+
+    setTimeout(() => {
+      var element = document.getElementsByTagName('mat-datepicker-content');
+      element[0].appendChild(btn);
+    })
+  }
+
   constructor(private _dialog: MatDialog, private _snackbar: MatSnackBar) {
     // Update the value for the progress-bar on an interval.
    

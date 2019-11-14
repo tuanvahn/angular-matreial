@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ComponentMaterialModule } from './modules/component-material/component-material.module';
-
 @NgModule({
   imports: [
     BrowserModule,

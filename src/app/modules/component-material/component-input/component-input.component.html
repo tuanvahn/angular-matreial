@@ -156,7 +156,7 @@
         </mat-card-content>
       </mat-card>
       <!-- /Material Tab -->
-  
+
       <mat-card>
         <mat-icon>build</mat-icon>
         <mat-icon>android</mat-icon>
@@ -250,7 +250,7 @@
         </mat-card-content>
       </mat-card>
       <!-- /Material Menu-->
-  
+    
       <!-- Material Dialog-->
       <mat-card>
         <mat-card-content>
@@ -266,5 +266,16 @@
       </button>
       <!-- /Material Fab-->
     </div>
+
+    
+      <!-- Lịch -->
+      <h2>Datepicker Material</h2>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <!-- End lịch -->
+      
   </mat-sidenav-container>
   
